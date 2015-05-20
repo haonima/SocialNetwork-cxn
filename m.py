@@ -11,7 +11,7 @@ def main():
         (r'/register',registerHandler),
         (r'/upload',uploadHandler),
         (r'/error',errorHandler),
-        (r'/new',newHandler)
+        (r'/success',succHandler)
     ]
     
     settings = {

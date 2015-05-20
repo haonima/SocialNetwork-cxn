@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>虎嗅网</title> 
+    <link href="../static/css/bootstrap.min.css?v=201504231835" rel="stylesheet">
+    <link href="../static/css/style.css?v=2015050505" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <script>
+        var uid='0';
+        var huxiu_hash_code='af76267345619ecf38ba967e794bdf33';
+        var count_article_id=0;//文章id记录
+        var cookiepre='HUXIU_016a_';//cookie前缀
+    </script>
+</head>
+<body>
+	<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+	<div class="top navbar-inverse">
+		<div class="container">
+			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+				<ul class="nav navbar-nav navbar-right manuscript">
+					<!--<li class="active">
+						<span class="s-btn dropdown-toggle js-btn-taogao" data-toggle="dropdown">投稿</span>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="/contribute.html?action=newdraft">文章投稿<i class="glyphicon glyphicon-question-sign tool-tip" data-placement="right"  title="原创文章丢过来"></i></a></li>
+							<li><a href="/contribute.html?type=read&action=newdraft">读点投稿<i class="glyphicon glyphicon-question-sign tool-tip" data-placement="right"  title="推荐书给虎嗅读点"></i></a></li>
+							<li><a class="js-draft-box" href="/member/draft_article.html">&nbsp;&nbsp;&nbsp;草稿箱<span></span><i class="glyphicon glyphicon-question-sign tool-tip" data-placement="right"  title="未投递的草稿都存在这里"></i></a></li>
+							<li class="divider"></li>
+							<li><a href="/zhuanti/hxchuangyehui.html">创业报道<i class="glyphicon glyphicon-question-sign tool-tip" data-placement="right"  title="提交公司信息，寻求创业报道"></i></a></li>
+						</ul>
+					</li>-->
+						<li><a class="moder-lgn-box" href="/user/login.html" >登录</a></li>
+						<li><a href="/user/register.html" >注册</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="/" class="navbar-brand"><img src="/static/img/logo.png" alt="logo.png" /></a>
+			</div>
+			<nav class="collapse navbar-collapse " role="navigation">
+				<form class="navbar-form navbar-right" role="search" method="get" action="/search.html">
+					<div class="form-group">
+						<input type="text" name="s" class="form-control js-input-search" placeholder="请输入查询内容" value="">
+						<button type="submit" class=""></button>
+					</div>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-news ">
+						<a href="/">资讯</a>
+						<ul class="nav-menu2">
+							<li><a href="/focus">看点<i></i></a></li>
+							<li><a href="/opinions">观点<i></i></a></li>
+							<li><a href="/books">读点<i></i></a></li>
+							<li><a href="/photo">图说<i></i></a></li>
+							<li><a href="/tags">标签<i></i></a></li>
+						</ul>
+					</li>
+					<li ><a href="/products" target="_blank">用点</a></li>
+					<li ><a href="/collections" target="_blank">文集</a></li>
+					<li class="nav-news ">
+						<a href="/active" id="hx-active">活动</a>
+						<ul class="nav-menu2">
+							<li ><a>虎嗅活动<span class="i-icon2 icon-top-right"></span></a>
+								<ul class="nav-menu3">
+									<li><a href="http://www.huxiu.com/active/content/30/1.html" target="_blank">TOP DAY<i></i></a></li>
+									<li><a href="http://www.huxiu.com/active/content/28/1.html" target="_blank">上道沙龙<i></i></a></li>
+									<li><a href="/zhuanti/2014winterfm" target="_blank">F&M节<i></i></a></li>
+									<li><a href="/zhuanti/hx2015xmtyx" target="_blank">WoW!营销会<i></i></a></li>
+									<li><a href="/zhuanti/hxtingshuhui8" target="_blank">虎嗅听书会<i></i></a></li>                                <li><a href="/special" target="_blank">更多虎嗅活动<i></i></a></li>
+								</ul>
+							</li>
+							<li><a href="/active">活动日历<i></i></a></li>
+						</ul>
+					</li>
+					<li ><a href="/group" target="_blank">群组</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+		<div id="page_reg" class="page-reg js-moder-reg">
+			<div class="container wrap">
+				<div class="row">
+					<div class="wrap-left">
+						<div class="wrap-box">
+						<form id="form_reg" class="form-h form-msg clearfix" role="form" action="/user/email_register" method="POST">
+								<ul class="tab-type js-tab-type clearfix">
+									   <li class="js-type-phone active"><a href="javascript:void(0);">手机注册</a></li>
+									   <li class="js-type-email"><a href="javascript:void(0);">邮箱注册</a></li>
+								   </ul>
+								<input type="hidden" name="hx_auth_token" id="hx_auth_token" value="YjE2NUQwSWl1RS92M0ZUMmEzOXpmSjBsQWNmUnpqUlJFVjJOalQvMitESjlaYWhsV2wrN0ZSeXBuaFdUMElmVldLZjFvVnlCbmYwakdwZUhBdw==">
+								<div class="reg-cnt">
+									<div class="form-group form-group-captcha clearfix">
+										<input type="hidden" name="captchaname" value="3ba26a97e0eca762fe65d85f8e456347">
+										<label for="reg_validate_code" class="control-label">验证码：</label>
+										<script async type="text/javascript" src="http://api.geetest.com/get.php?gt=548c2cafa30429971157b61ab991bfe8"></script>                                    <div class="message-tip hints"></div>
+										<i class="i-icon icon-ok"></i>
+										<i class="i-icon icon-error"></i>
+										<span class="errors"></span>
+									</div>
+									<div class="form-group clearfix">
+										<label for="email" class="control-label">输入邮箱：</label>
+										<input class="form-control" data-required="true" data-email="true" data-email-unique-remote="true" type="text" name="email" id="email" />
+										<div class="message-tip hints"></div>
+										<i class="i-icon icon-ok"></i>
+										<i class="i-icon icon-error"></i>
+										<span class="errors"></span>
+									</div>
+									<div class="form-group clearfix">
+										<label for="reg_username" class="control-label">用户名：</label>
+										<input class="form-control" data-required="true" data-not-all-number="true" data-max-length="30" data-min-length="3" data-username-unique-remote="true" name="username" type="text" id="username" />
+										<div class="message-tip hints">3-30位字符，中英文、数字和常用符号</div>
+										<i class="i-icon icon-ok"></i>
+										<i class="i-icon icon-error"></i>
+										<span class="errors"></span>
+									</div>
+									<div class="form-group clearfix">
+										<label for="reg_password" class="control-label">输入密码：</label>
+										<input class="form-control" name="password" data-required="true" data-max-length="20" data-min-length="6" type="password" id="password" />
+										<div class="message-tip hints">6-20位字符，区分大小写</div>
+										<i class="i-icon icon-ok"></i>
+										<i class="i-icon icon-error"></i>
+										<span class="errors"></span>
+
+									</div>
+									<div class="form-group clearfix">
+										<label for="reg_rpt_password" class="control-label">确认密码：</label>
+										<input class="form-control" data-required="true" data-match="password|密码" name="password_confirmation" type="password" id="password_confirmation" />
+										<div class="message-tip hints"></div>
+										<i class="i-icon icon-ok"></i>
+										<i class="i-icon icon-error"></i>
+										<input type="hidden" name="stape" value="">
+										<span class="errors"></span>
+									</div>
+								</div>
+
+												  <div class="form-group form-group-left">
+								<div class="checkbox">
+									<label>点击注册按钮表示您已同意并接受<a class="js-reg-protocol" href="javascript:void(0);">《虎嗅网用户使用协议》</a></label>
+								</div>
+							</div>
+
+							<div class="form-group form-group-left">
+								<input class="btn btn-blue js-btn-reg" type="submit" value="注册">
+							</div>
+
+						</form>
+						</div>
+						<div class="wrap-right">
+							<div class="login-three">
+								<div class="login-three-ttl">第三方账号登录</div>
+								<a class="btn-weixin" href="/user/auth_login/weixin.html"><i></i><span>微信登录</span></a>
+								<a class="btn-sina" href="/user/auth_login/weibo.html"><i></i><span>微博登录</span></a>
+								<a class="btn-qq" href="/user/auth_login/qq.html"><i></i><span>QQ登录</span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<footer class="bs-docs-footer" role="contentinfo">
+		<div class="footer-nav">
+			<div class="container">
+				<ul class="about-ul list-inline clearfix">
+					<li><a href="/about" target="_blank">关于我们</a></li>
+					<li><a href="/joinus" target="_blank">加入我们</a></li>
+					<li><a href="/contact" target="_blank">广告及服务</a></li>
+					<li><a href="/help" target="_blank">常见问题解答</a></li>
+				</ul>
+			</div>
+		</div>
+			<div class="container copy-right">
+			<span>Copyright © haonima</span>
+			<a href="#"><img src="/static/img/footer.png" alt="footer.png" /></a>
+		</div>
+	</footer>
+
+	<div class="go-top js-go-top" id="go-top-btn"></div>
+
+	<div id="ad_box" class="modal" tabindex="-1" role="dialog"><div class="modal-backdrop fade in"></div><div class="ad-img-box"><img src="/static/img/huxiuAd.jpg" alt="huxiu img"><a class="close" href="javascript:void(0);"></a></div></div>
+
+	<script src="/static/js/sea.js?ver=201504241150"></script>
+	<script src="/static/js/sea_config.js?ver=201505041829"></script>
+	<div style="display: none">
+		<script type="text/javascript">
+			var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F324368ef52596457d064ca5db8c6618e' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script src="http://z.huxiu.com/cc/tjj.js?uid=0&last_page=http%3A%2F%2Fwwww.huxiu.com%2Fuser%2Fregister.html" type="text/javascript">
+		</script>
+	</div>
+</body>
+</html>

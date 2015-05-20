@@ -1,14 +1,9 @@
-<html>
-    <head>
-        <title>upload</title>
-    </head>
-    <body>
-    sss
-    <div>
+{%extends 'main.html' %}
+{%block content%}
+<div>
         <form action='upload' enctype='multipart/form-data' method='post'> 
              <input name="imgfile" type="file"  /> 
              <input type='submit' value='submit'>
         </form> 
     </div>
-    </body>
-</html>
+{%end%}

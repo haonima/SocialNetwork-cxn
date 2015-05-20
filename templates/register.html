@@ -1,21 +1,85 @@
 {%extends 'main.html'%}  
   
-{%block content%} 
-<p class='text-danger'>no chinese</p>  
-<form action='/register' method='post' class='well'>  
-    <div class='form-group'>  
-        <label>username</label>  
-        <input type='text' name='username' class='form-control'/>  
-    </div>  
-    <div class='form-group'>  
-        <label>password</label>  
-        <input type='password' name='password1' class='form-control'/>  
-    </div>  
-    <div class='form-group'>  
-        <label>confirm passwork</label>  
-        <input type='password' name='password2' class='form-control'/>  
-    </div>  
-    <button type='submit' class='btn btn-primary' onclick='return checkpw()'>register</button>  
-    <a href='login'>login directly</a>  
-</form>  
+{%block content%}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<div id="page_reg" class="page-reg js-moder-reg">
+	<div class="container wrap">
+		<div class="row">
+			<div class="wrap-left">
+				<div class="wrap-box">
+				<form id="form_reg" class="form-h form-msg clearfix" role="form" action="register" method="POST">
+						<ul class="tab-type js-tab-type clearfix">
+							   <li class="js-type-phone active"><a href="register">注册</a></li>
+							   <li class="js-type-email"><a href="login">登录</a></li> 
+						   </ul>
+						
+						<div class="reg-cnt">
+							<div class="form-group form-group-captcha clearfix">
+								
+								<label for="reg_validate_code" class="control-label">验证码：</label>
+								<script async type="text/javascript" src="{{url}}"></script>
+								<div class="message-tip hints"></div>								
+								<i class="i-icon icon-ok"></i>
+								<i class="i-icon icon-error"></i>
+								<span class="errors"></span>
+							</div>
+							<div class="form-group clearfix">
+								<label for="email" class="control-label">输入邮箱：</label>
+								<input class="form-control" data-required="true" data-email="true" data-email-unique-remote="true" type="text" name="email" id="email" />
+								<div class="message-tip hints"></div>
+								<i class="i-icon icon-ok"></i>
+								<i class="i-icon icon-error"></i>
+								<span class="errors"></span>
+							</div>
+							<div class="form-group clearfix">
+								<label for="reg_username" class="control-label">用户名：</label>
+								<input class="form-control" data-required="true" data-not-all-number="true" data-max-length="30" data-min-length="3" data-username-unique-remote="true" name="username" type="text" id="username" />
+								<div class="message-tip hints">3-30位字符，中英文、数字和常用符号</div>
+								<i class="i-icon icon-ok"></i>
+								<i class="i-icon icon-error"></i>
+								<span class="errors"></span>
+							</div>
+							<div class="form-group clearfix">
+								<label for="reg_password" class="control-label">输入密码：</label>
+								<input class="form-control" name="password1" data-required="true" data-max-length="20" data-min-length="6" type="password" id="password" />
+								<div class="message-tip hints">6-20位字符，区分大小写</div>
+								<i class="i-icon icon-ok"></i>
+								<i class="i-icon icon-error"></i>
+								<span class="errors"></span>
+							</div>
+							<div class="form-group clearfix">
+								<label for="reg_rpt_password" class="control-label">确认密码：</label>
+								<input class="form-control" data-required="true" data-match="password|密码" name="password2" type="password" id="password_confirmation" />
+								<div class="message-tip hints"></div>
+								<i class="i-icon icon-ok"></i>
+								<i class="i-icon icon-error"></i>
+								<input type="hidden" name="stape" value="">
+								<span class="errors"></span>
+							</div>
+						</div>
+   				    <div class="form-group form-group-left">
+						<div class="checkbox">
+							<label>点击注册按钮表示您已同意并接受<a class="js-reg-protocol" href="javascript:void(0);">《用户使用协议》</a></label>
+						</div>
+					</div>
+
+					<div class="form-group form-group-left">
+						<input class="btn btn-blue js-btn-reg" type="submit" value="注册">
+					</div>
+
+				</form>
+				</div>
+				<div class="wrap-right">
+					<div class="login-three">
+						<div class="login-three-ttl">第三方账号登录</div>
+						<a class="btn-weixin" href="/user/auth_login/weixin.html"><i></i><span>微信登录</span></a>
+						<a class="btn-sina" href="/user/auth_login/weibo.html"><i></i><span>微博登录</span></a>
+						<a class="btn-qq" href="/user/auth_login/qq.html"><i></i><span>QQ登录</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 {%end%}
