@@ -2,6 +2,8 @@ import os
 import tornado.web
 import tornado.ioloop
 
+import uimodules
+
 from handlers import *
 
 def main():
@@ -11,7 +13,9 @@ def main():
         (r'/register',registerHandler),
         (r'/upload',uploadHandler),
         (r'/error',errorHandler),
-        (r'/success',succHandler)
+        (r'/success',succHandler),
+        (r'/usr/(.*)',usrHandler)
+        
     ]
     
     settings = {
@@ -23,7 +27,8 @@ def main():
         #base64.b64encode(uuid.uuid4().bytes + uuid.uuid4().bytes)
         #############################################################
         r"cookie_secret":"SEzK+fStSMOyneFM9T4UqHmZwCrnkU+QvOS17ErWayQ=",
-        r'login_url':'login'
+        r'login_url':'login',
+        r'ui_modules':uimodules
     }
     
     app = tornado.web.Application(handlers,**settings)

@@ -1,0 +1,91 @@
+{% extends main.html%}
+
+{% block content%}
+
+<div id="page_per_center" class="page-view-data">
+    <div class="container wrap">
+        <div class="section section-top">
+            <div class="reg-time"></div>          
+			<div class="user-top">
+                <div class="user-left">
+                    <div class="head90"><img src="{{u['pic']}}" /></div>
+                    <div class="head-attr">                        
+                        <p class="head-attr-item clearfix"><span class="jingyan">经验值</span><span class="dotted"><i></i></span><span class="num js-jy" title="198">{{u['exp']}}</span></p>
+                    </div>
+                </div>
+                <div class="user-right">
+                    <div class="author-box js-accnt-name" uname="Eastland">{{u['name']}} <a href="/renzheng.html?#hxtdrz" target="_blank" class="i-icon icon-team-auth" title="虎嗅团队认证"></a>                    </div>
+                    <div class="author-word js-user-item">
+                        <i class="dotted"></i>
+                        <span class="info-text js-info-text" name="yijuhua">{{u['description']}} </span>
+                    </div>
+                </div>
+            </div>
+            <div class="user-cnt js-user-cnt" uid="303086">
+                <ul class="user-cnt-box">
+                    <li class="user-item js-user-item">电话：<span class="item-text js-info-text" name="company">
+                            {{u['tel']}}</span>
+                    </li>                    
+                    <li class="line"></li>
+                    <li class="user-item js-user-item">邮箱：<span class="item-text js-info-text">
+                            {{u['email']}}</span>
+                    </li>
+                    <li class="user-item js-user-item">年级：<span class="item-text js-info-text" name="weibo">
+                            {{u['years']}}</span>
+                    </li>                    
+                    <li class="line"></li>
+                </ul>
+				<ul class="user-btn-box clearfix">
+					<a class="btn btn-blue " href="#" >私信</a>
+					<a class="btn btn-blue " href="#" >聊天</a>
+				</ul>				
+            </div>
+        </div>
+		<div class="section section-user-data">
+            <ul class="tab-type clearfix">
+                <li class="lh60 active"><a href="/member/303086/.html">首页</a></li>
+                <li class=""><a href="/member/303086/article/1.html" >文章<div>（234）</div></a></li>                
+			</ul>
+            <div class="user-list user-article">
+				<div class="l-t-nr clearfix">
+					<h3>TA的文章</h3>
+					<a href="/member/303086/article/1.html">更多</a>
+				</div>
+				<ul class="list-box">
+					<li class="list-item">
+						<time class="time">2015-05-22 07:19</time>
+						<a class="item-t" href="/article/115747/1.html" target="_blank">A股回归潮，22家“海归”企盼万亿市值</a>
+						<a class="cmt pull-right" href="/comment/115747.html" target="_blank" title="评论数"><i class="i-icon icon-cmt"></i>9</a>
+					</li>
+					<li class="list-item">
+						<time class="time">2015-05-21 07:11</time>
+						<a class="item-t" href="/article/115536/1.html" target="_blank">论做空唯品会的正确姿势</a>
+						<a class="cmt pull-right" href="/comment/115536.html" target="_blank" title="评论数"><i class="i-icon icon-cmt"></i>7</a>
+					</li>   
+				</ul>
+			</div>
+			<div class="user-list user-cmt">
+				<div class="l-t-nr clearfix">
+					<h3>TA的评论</h3>
+					<a href="/member/303086/post/1.html">更多</a>
+				</div>
+				<ul class="list-box">
+					<li class="list-item js-list-item" type="comment" pid="519538">
+						<time class="time">2015-05-19 10:36:09</time>
+						<a class="item-detail" href="/comment/115467.html?pid=519538#g_pid519538" target="_blank">
+							<p class="item-cmt">一百个一流的实干家都无法支撑一个普通的吹牛匠。乔布斯再生也无法为一个失心疯了的吹牛大王圆谎。</p>
+						</a>
+					</li>
+					<li class="list-item js-list-item" type="comment" pid="515837">
+						<time class="time">2015-04-25 05:42:16</time>
+						<a class="item-detail" href="/comment/113535.html?pid=515837#g_pid515837" target="_blank">
+							<p class="item-cmt">少拿专业做挡箭牌，几千上市公司就你们主子有专业？</p>
+						</a>
+					</li>
+				</ul>
+			</div>        
+		</div>
+    </div>
+</div>
+
+{% end %}

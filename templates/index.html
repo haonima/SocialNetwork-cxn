@@ -1,4 +1,131 @@
 {%extends 'main.html' %}
 {%block content%}
-welcome back, {{name}}
+<body>
+    <div class="container wrap page-article" id="page_list">
+    <div class="row">
+        <div class="pull-left wrap-left">
+            <div class="shadow-box-noshadow mod-list-box mod-headlines">
+                <h1 class="t-h1"><a href="/article/115558" target="_blank">{{headline['title']}}</a></h1>
+                <p class="sub-p">{{headline['description']}}</p>
+                <div class="big-pic">
+					<a href="#" ><img src="{{headline['pic']}}"></a>					
+				</div>
+                <div class="clearfix article-other" >
+                    <span class="pull-left author">
+						<a class="author-name hx-card" userid="29318" href="usr/{{headline['author']}}" >{{headline['author']}}</a>						
+                    </span>
+                    <time class="pull-left time">{{headline['time']}}</time>
+					<ul class="pull-left list-inline tag-box">
+						<li><a href="/tags/2263.html" target="_blank">头条</a></li>
+						<li><a href="/tags/357.html" target="_blank">投稿</a></li>
+						<li><a href="/tags/10209.html" target="_blank">1024</a></li>
+					</ul>
+                    <span class="pull-right action-box">
+                        <span class="share-box js-list-share-btn" aid="115558" href="#"  title="分享">
+                            <i class="i-icon2 icon-share-box"></i><em></em>
+                            <div class="hide"></div>
+                        </span>
+						<a class="fvr js-fvr-btn" href="javascript:void(0);" aid="115558" actype="unread" title="收藏数">
+							<i class="i-icon icon-fvr"></i><em></em>
+						</a>
+						<a class="cmt" href="/comment/115558/1.html" title="评论" target="_blank">
+							<i class="i-icon icon-cmt"></i><em>{{headline['visit']}}</em>
+						</a>
+                    </span>
+                </div>
+            </div>
+            <!-- 信息流模块 -->
+            <div class="clearfix shadow-box-noshadow mod-info-flow">
+				{% for i in toy %}
+					{% module listModule(i)%}
+				{%end%}
+			                         
+            <nav class="text-right page-wrap">
+				<ul class="pagination">
+					<li class="disabled">
+						<span>
+							<i class="i-icon3 icon-page-first"></i>
+						</span>
+					</li>
+					<li class="disabled">
+						<a>
+							<i class="i-icon3 icon-page-lt"></i>
+						</a>
+					</li>
+					<li class="active">
+						<span>1</span>
+					</li>
+					<li>
+						<a href="/focus/2.html">2</a>
+					</li>
+					<li>
+						<a href="/focus/3.html">3</a>
+					</li>
+					<li>
+						<a href="/focus/4.html">4</a>
+					</li>
+					<li>
+						<a href="/focus/2.html">    
+							<i class="i-icon3 icon-page-gt"></i>
+						</a>
+					</li>
+					<li>
+						<a href="/focus/1454.html">
+							<i class="i-icon3 icon-page-last"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>                          
+			</div>
+            <div class="clearfix shadow-box-noshadow mob-class ">
+				<ul class="clearfix js-box-point">
+					<li class="active">
+						<a class="type" href="/focus" target="_blank">看点<span class="recmd">推荐：草榴关站风...</span></a>
+					</li>
+					<li >
+						<a class="type" href="/opinions" target="_blank">观点<span class="recmd">推荐：叫板乐视小...</span></a>
+					</li>
+					<li >
+						<a class="type" href="/books" target="_blank">读点<span class="recmd">推荐：《支付战争...</span></a>
+					</li>
+					<li >
+						<a class="type" href="/photo" target="_blank">图说<span class="recmd">推荐：扎克伯格3...</span></a>
+					</li>
+				</ul>
+			</div>        </div>
+<div class="pull-right wrap-right">
+	<div class="box-moder tag-right-box">
+		<div class="l-t">
+			<h3><i class="i-icon icon-point"></i>热门标签</h3>
+			<a href="/tagslist/all.html">所有标签</a>
+		</div>
+		<div class="tag-cnt-box">
+			<ul class="tag-list clearfix">
+				<li class="js-tag-w"><a href="/tags/357.html" target="_blank">投稿</a><span class="js-sub-tag" tag_id="357">+</span></li>
+				<li class="js-tag-w"><a href="/tags/36.html" target="_blank">阿里巴巴</a><span class="js-sub-tag" tag_id="36">+</span></li>
+				<li class="js-tag-w"><a href="/tags/29.html" target="_blank">创业</a><span class="js-sub-tag" tag_id="29">+</span></li>
+				<li class="js-tag-w"><a href="/tags/79.html" target="_blank">移动互联网</a><span class="js-sub-tag" tag_id="79">+</span></li>
+				<li class="js-tag-w"><a href="/tags/73.html" target="_blank">电子商务</a><span class="js-sub-tag" tag_id="73">+</span></li>
+				<li class="js-tag-w"><a href="/tags/374.html" target="_blank">大数据</a><span class="js-sub-tag" tag_id="374">+</span></li>
+				<li class="js-tag-w"><a href="/tags/68.html" target="_blank">微信</a><span class="js-sub-tag" tag_id="68">+</span></li>
+				<li class="js-tag-w"><a href="/tags/35.html" target="_blank">马云</a><span class="js-sub-tag" tag_id="35">+</span></li>
+				<li class="js-tag-w"><a href="/tags/2263.html" target="_blank">头条</a><span class="js-sub-tag" tag_id="2263">+</span></li>
+				<li class="js-tag-w"><a href="/tags/40.html" target="_blank">百度</a><span class="js-sub-tag" tag_id="40">+</span></li>
+			</ul>
+		</div>
+    </div>
+    <div class="box-moder week-author-ranking js-hot-author-list hidden"></div>
+    <div class="box-moder xiuping-list js-xiu-cmt-list hidden"></div>
+</div>    
+</div>
+</div>
+
+<div class="go-top js-go-top" id="go-top-btn"></div>
+
+<div id="ad_box" class="modal" tabindex="-1" role="dialog"><div class="modal-backdrop fade in"></div><div class="ad-img-box"><img src="/static/img/huxiuAd.jpg" alt="huxiu img"><a class="close" href="javascript:void(0);"></a></div></div>
+
+<script src="/static/js/sea.js?ver=201504241150"></script>
+<script src="/static/js/sea_config.js?ver=201505041829"></script>
+</body>
+
 {%end%}
